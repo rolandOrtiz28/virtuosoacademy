@@ -58,6 +58,10 @@
     color: #d9aab6;
 }
 
+.welcome-text span{
+    color:#d9aab6 ;
+}
+
 .text-primary{
     color: #d9aab6 !important;
 }
@@ -208,16 +212,16 @@
     border-color: var(--primary);
 }
 
-.page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+/* .page-header {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/1.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
-.page-header-inner {
+/* .page-header-inner {
     background: rgba(15, 23, 43, .7);
-}
+} */
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: var(--light);
@@ -268,6 +272,7 @@
 .service-item {
     background: var(--light);
     transition: .5s;
+    cursor: pointer;
 }
 
 .service-item:hover {
@@ -447,5 +452,10 @@
 
 .navbar-brand h2 img{
 width: 20%;
+
+}
+
+.page-header{
+background-color: #d9aab6;
 
 }

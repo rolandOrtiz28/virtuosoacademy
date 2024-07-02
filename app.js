@@ -31,6 +31,11 @@ db.once('open', () => {
 
 // routes
 
+const aboutRoute = require('./routes/about')
+
+
+//session
+
 const secret = process.env.SESSION_SECRET
 
 
@@ -86,6 +91,8 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+
+app.use('/About', aboutRoute)
 
 
 app.use(bodyParser.json());
