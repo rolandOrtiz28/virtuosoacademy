@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,14 +24,14 @@
             $('.sticky-top').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
     const $dropdownToggle = $(".dropdown-toggle");
     const $dropdownMenu = $(".dropdown-menu");
     const showClass = "show";
-    
+
     $(window).on("load resize", function() {
         if (this.matchMedia("(min-width: 992px)").matches) {
             $dropdown.hover(
@@ -52,8 +52,8 @@
             $dropdown.off("mouseenter mouseleave");
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -104,6 +104,29 @@
             }
         }
     });
-    
+
 })(jQuery);
 
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const currentPath = window.location.pathname;
+
+    const navLinks = [
+        { id: 'nav-home', path: '/' },
+        { id: 'nav-about', path: '/About' },
+        { id: 'nav-courses', path: '/courses' },
+        { id: 'nav-team', path: '/About/team' },
+        { id: 'nav-testimonial', path: '/testimonial' },
+        { id: 'nav-404', path: '/404' },
+        { id: 'nav-contact', path: '/contact' }
+    ];
+
+    navLinks.forEach(link => {
+        if (link.path === currentPath) {
+            document.getElementById(link.id).classList.add('active');
+        } else {
+            document.getElementById(link.id).classList.remove('active');
+        }
+    });
+});

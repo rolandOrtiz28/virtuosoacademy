@@ -32,6 +32,11 @@ db.once('open', () => {
 // routes
 
 const aboutRoute = require('./routes/about')
+const courseRoute = require('./routes/courses')
+const contactRoute = require('./routes/contact')
+const testimonialRoute = require('./routes/testimonial')
+const teamRoute = require('./routes/team')
+const authRoute = require('./routes/auth')
 
 
 //session
@@ -93,6 +98,11 @@ app.get('/', (req, res) => {
 
 
 app.use('/About', aboutRoute)
+app.use('/Courses', courseRoute)
+app.use('/Contact', contactRoute)
+app.use('/Testimonial', testimonialRoute)
+app.use('/Team', teamRoute)
+app.use('/Authentication', authRoute)
 
 
 app.use(bodyParser.json());

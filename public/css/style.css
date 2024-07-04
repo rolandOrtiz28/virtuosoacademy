@@ -173,7 +173,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -456,6 +456,10 @@ width: 20%;
 }
 
 .page-header{
+background-color: #d9aab6;
+
+}
+.footer{
 background-color: #d9aab6;
 
 }
