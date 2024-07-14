@@ -49,9 +49,7 @@
     color: #FFFFFF;
 }
 
-.btn-bc{
-    background-color: #d9aab6;
-}
+
 
 .btn-bc:hover{
     background-color: #ffffff;
@@ -463,3 +461,7 @@ background-color: #d9aab6;
 background-color: #d9aab6;
 
 }
+
+
+/* Authentication */
+

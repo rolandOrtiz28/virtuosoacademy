@@ -17,7 +17,8 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const flash = require('connect-flash');
 
-//
+//Model
+const User = require('./model/auth')
 
 // MongoDB connection
 mongoose.connect(dbUrl, {});
@@ -61,6 +62,8 @@ const sessionConfig = {
     }
 };
 
+
+
 app.set('view engine', 'ejs');
 app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
@@ -74,7 +77,14 @@ app.use(session(sessionConfig));
 
 app.use(passport.initialize());
 app.use(passport.session());
-// passport.use(new LocalStrategy(Admin.authenticate()));
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(function (user, cb) {
+    cb(null, user);
+});
+
+passport.deserializeUser(function (obj, cb) {
+    cb(null, obj);
+});
 
 passport.serializeUser(function (user, cb) {
     cb(null, user);
@@ -91,6 +101,8 @@ app.use((req, res, next) => {
     res.locals.error = req.flash('error');
     next();
 });
+
+
 
 app.get('/', (req, res) => {
     res.render('index');
