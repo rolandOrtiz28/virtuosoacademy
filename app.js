@@ -33,6 +33,7 @@ db.once('open', () => {
 // routes
 
 const aboutRoute = require('./routes/about')
+const adminRoute = require('./routes/admin')
 const courseRoute = require('./routes/courses')
 const contactRoute = require('./routes/contact')
 const testimonialRoute = require('./routes/testimonial')
@@ -110,6 +111,7 @@ app.get('/', (req, res) => {
 
 
 app.use('/About', aboutRoute)
+app.use('/Admin', adminRoute)
 app.use('/Courses', courseRoute)
 app.use('/Contact', contactRoute)
 app.use('/Testimonial', testimonialRoute)
