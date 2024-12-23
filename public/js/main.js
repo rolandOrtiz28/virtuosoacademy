@@ -109,27 +109,7 @@
 
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    const currentPath = window.location.pathname;
 
-    const navLinks = [
-        { id: 'nav-home', path: '/' },
-        { id: 'nav-about', path: '/About' },
-        { id: 'nav-courses', path: '/courses' },
-        { id: 'nav-team', path: '/About/team' },
-        { id: 'nav-testimonial', path: '/testimonial' },
-        { id: 'nav-404', path: '/404' },
-        { id: 'nav-contact', path: '/contact' }
-    ];
-
-    navLinks.forEach(link => {
-        if (link.path === currentPath) {
-            document.getElementById(link.id).classList.add('active');
-        } else {
-            document.getElementById(link.id).classList.remove('active');
-        }
-    });
-});
 
 
 

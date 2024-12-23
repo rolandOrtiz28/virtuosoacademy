@@ -18,9 +18,34 @@
                 </div>
             </div>
             <a href="/contact" id="nav-contact" class="nav-item nav-link">Contact</a>
-            <a href="/contact" id="nav-contact" class="nav-item nav-link btn btn-bc">Login</a>
-            <a href="/Authentication" id="nav-contact" class="nav-item nav-link btn btn-bc">SignUp</a>
+            <a href="/contact" id="nav-login" class="nav-item nav-link">Login</a>
+            <a href="/Authentication" id="nav-signup" class="nav-item nav-link">SignUp</a>
         </div>
 
     </div>
 </nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const currentPath = window.location.pathname;
+
+    const navLinks = [
+        { id: 'nav-home', path: '/' },
+        { id: 'nav-about', path: '/About' },
+        { id: 'nav-courses', path: '/courses' },
+        { id: 'nav-team', path: '/About/team' },
+        { id: 'nav-testimonial', path: '/testimonial' },
+        { id: 'nav-404', path: '/404' },
+        { id: 'nav-contact', path: '/contact' }
+    ];
+
+    navLinks.forEach(link => {
+        if (link.path === currentPath) {
+            document.getElementById(link.id).classList.add('active');
+        } else {
+            document.getElementById(link.id).classList.remove('active');
+        }
+    });
+});
+
+</script>

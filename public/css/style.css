@@ -44,10 +44,6 @@
     transition: .5s;
 }
 
-.btn.btn-primary,
-.btn.btn-secondary {
-    color: #FFFFFF;
-}
 
 
 
@@ -271,6 +267,12 @@
     background: var(--light);
     transition: .5s;
     cursor: pointer;
+    height: 300px; /* Set a consistent height */
+    width: 100%; /* Ensure it scales with the column width */
+    display: flex; /* Align content within the item */
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center;
 }
 
 .service-item:hover {
@@ -285,6 +287,8 @@
 .service-item:hover * {
     color: var(--light) !important;
 }
+
+
 
 
 /*** Categories & Courses ***/
